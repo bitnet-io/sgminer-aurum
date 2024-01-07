@@ -50,7 +50,7 @@ typedef struct {
     sph_echo512_context     echo1;
 } Qhash_context_holder;
 
-Qhash_context_holder base_contexts;
+static Qhash_context_holder base_contexts;
 
 
 void init_Qhash_contexts()

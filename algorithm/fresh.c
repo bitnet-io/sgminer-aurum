@@ -49,7 +49,7 @@ typedef struct {
   sph_echo512_context     echo2;
 } FreshHash_context_holder;
 
-FreshHash_context_holder base_contexts;
+static FreshHash_context_holder base_contexts;
 
 void init_freshHash_contexts()
 {

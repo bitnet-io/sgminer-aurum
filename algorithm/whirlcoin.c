@@ -44,7 +44,7 @@ typedef struct {
   sph_whirlpool1_context whirlpool4;
 } Whash_context_holder;
 
-Whash_context_holder base_contexts;
+static Whash_context_holder base_contexts;
 
 
 void init_whirlcoin_hash_contexts()
