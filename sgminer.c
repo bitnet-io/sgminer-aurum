@@ -1402,7 +1402,7 @@ char *set_difficulty_multiplier(char *arg)
 struct opt_table opt_config_table[] = {
   OPT_WITH_ARG("--algorithm|--kernel|-k",
          set_default_algorithm, NULL, NULL,
-         "Set mining algorithm and most common defaults, default: scrypt"),
+         "Set mining algorithm and most common defaults, default: aurum"),
   OPT_WITH_ARG("--api-allow",
          set_api_allow, NULL, NULL,
          "Allow API access only to the given list of [G:]IP[/Prefix] addresses[/subnets]"),

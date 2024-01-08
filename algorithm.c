@@ -43,6 +43,7 @@
 #include "algorithm/ethash.h"
 #include "algorithm/cryptonight.h"
 #include "algorithm/equihash.h"
+#include "algorithm/aurum.h"
 
 #include "compat.h"
 
@@ -77,7 +78,8 @@ const char *algorithm_type_str[] = {
   "Vanilla",
   "Ethash",
   "Cryptonight",
-  "Equihash"
+  "Equihash",
+  "Aurum"
 };
 
 void sha256(const unsigned char *message, unsigned int len, unsigned char *digest)
@@ -1274,6 +1276,7 @@ static algorithm_settings_t algos[] = {
   A_DARK("myriadcoin-groestl", myriadcoin_groestl_regenhash),
 #undef A_DARK
 
+  { "aurum", ALGO_AURUM, "", 1, 4096, 1, 0, 0, 0xFF, 0xFFFFULL, 0x0000ffffUL, 0, 0, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE, aurum_regenhash, NULL, queue_sph_kernel, gen_hash, append_x13_compiler_options },
   { "twecoin", ALGO_TWE, "", 1, 1, 1, 0, 0, 0xFF, 0xFFFFULL, 0x0000ffffUL, 0, 0, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE, twecoin_regenhash, NULL, queue_sph_kernel, sha256, NULL },
   { "maxcoin", ALGO_KECCAK, "", 1, 256, 1, 4, 15, 0x0F, 0xFFFFULL, 0x000000ffUL, 0, 0, CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE, maxcoin_regenhash, NULL, queue_maxcoin_kernel, sha256, NULL },
 

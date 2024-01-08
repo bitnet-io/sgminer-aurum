@@ -253,7 +253,7 @@ enum drv_driver {
 
 /* Use DRIVER_PARSE_COMMANDS to generate extern device_drv prototypes */
 #ifndef _MSC_VER
-DRIVER_PARSE_COMMANDS(DRIVER_PROTOTYPE)
+//DRIVER_PARSE_COMMANDS(DRIVER_PROTOTYPE)
 #endif
 
 // helper to check for empty or NULL strings
